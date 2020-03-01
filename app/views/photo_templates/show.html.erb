@@ -56,7 +56,11 @@
       </dt>
       <!-- Display owner_id start -->
       <dd>
-        <%= @photo.owner_id %>
+        <% if @photo.owner.present? %>
+          <a href="/users/<%= @photo.owner_id %>">
+            <%= @photo.owner.username %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display owner_id end -->
 
