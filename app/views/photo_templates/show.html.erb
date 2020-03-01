@@ -1,0 +1,91 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Photo #<%= @photo.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/photos" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link photo start -->
+      <div class="col">
+        <a href="/photos/<%= @photo.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit photo
+        </a>
+      </div>
+      <!-- Edit link photo end -->
+
+      <!-- Delete link photo start -->
+      <div class="col">
+        <a href="/delete_photo/<%= @photo.id %>" class="btn btn-block btn-outline-secondary">
+          Delete photo
+        </a>
+      </div>
+      <!-- Delete link photo end -->
+    </div>
+
+    <dl>
+      <dt>
+        Caption
+      </dt>
+      <!-- Display caption start -->
+      <dd>
+        <%= @photo.caption %>
+      </dd>
+      <!-- Display caption end -->
+
+      <dt>
+        Image
+      </dt>
+      <!-- Display image start -->
+      <dd>
+        <%= @photo.image %>
+      </dd>
+      <!-- Display image end -->
+
+      <dt>
+        Owner
+      </dt>
+      <!-- Display owner_id start -->
+      <dd>
+        <%= @photo.owner_id %>
+      </dd>
+      <!-- Display owner_id end -->
+
+      <dt>
+        Location
+      </dt>
+      <!-- Display location start -->
+      <dd>
+        <%= @photo.location %>
+      </dd>
+      <!-- Display location end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@photo.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@photo.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

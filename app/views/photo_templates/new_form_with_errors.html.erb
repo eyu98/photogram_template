@@ -1,0 +1,80 @@
+<!-- Validation failure messages -->
+<% if @photo.present? %>
+  <% if @photo.errors.any? %>
+    <% @photo.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new photo
+</h1>
+
+
+<hr>
+
+<!-- Form photo start -->
+<form action="/create_photo" method="post">
+<!-- Form photo end -->
+
+  <!-- Label and input for caption start -->
+  <div class="form-group">
+    <label for="caption">
+      Caption
+    </label>
+
+    <!-- Input for caption start -->
+    <input type="text" id="caption" name="caption" class="form-control" value="<%= @photo.caption %>">
+    <!-- Input for caption end -->
+  </div>
+  <!-- Label and input for caption end -->
+
+  <!-- Label and input for image start -->
+  <div class="form-group">
+    <label for="image">
+      Image
+    </label>
+
+    <!-- Input for image start -->
+    <input type="text" id="image" name="image" class="form-control" value="<%= @photo.image %>">
+    <!-- Input for image end -->
+  </div>
+  <!-- Label and input for image end -->
+
+  <!-- Label and input for owner_id start -->
+  <div class="form-group">
+    <label for="owner_id">
+      Owner
+    </label>
+
+    <!-- Input for owner_id start -->
+    <input type="text" id="owner_id" name="owner_id" class="form-control" value="<%= @photo.owner_id %>">
+    <!-- Input for owner_id end -->
+  </div>
+  <!-- Label and input for owner_id end -->
+
+  <!-- Label and input for location start -->
+  <div class="form-group">
+    <label for="location">
+      Location
+    </label>
+
+    <!-- Input for location start -->
+    <input type="text" id="location" name="location" class="form-control" value="<%= @photo.location %>">
+    <!-- Input for location end -->
+  </div>
+  <!-- Label and input for location end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create photo
+  </button>
+</form>
+
+<hr>
+
+<a href="/photos">
+  Go back
+</a>
