@@ -43,15 +43,6 @@
   <!-- Label and input for image end -->
 
   <!-- Label and input for owner_id start -->
-  <div class="form-group">
-    <label for="owner_id">
-      Owner
-    </label>
-
-    <!-- Input for owner_id start -->
-    <%= select_tag(:owner_id, options_from_collection_for_select(User.all, :id, :username, @photo.owner_id), :class => "form-control") %>
-    <!-- Input for owner_id end -->
-  </div>
   <!-- Label and input for owner_id end -->
 
   <!-- Label and input for location start -->

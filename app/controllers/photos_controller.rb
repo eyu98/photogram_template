@@ -45,7 +45,7 @@ class PhotosController < ApplicationController
 
     @photo.caption = params.fetch("caption")
     @photo.image = params.fetch("image") if params.key?("image")
-    @photo.owner_id = params.fetch("owner_id")
+    
     @photo.location = params.fetch("location")
 
     if @photo.valid?
