@@ -11,13 +11,11 @@
         </a>
       </div>
 
-      <!-- Edit link user start -->
       <div class="col">
         <a href="/users/<%= @user.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit user
         </a>
       </div>
-      <!-- Edit link user end -->
 
     </div>
 
@@ -25,84 +23,66 @@
       <dt>
         Email
       </dt>
-      <!-- Display email start -->
       <dd>
         <%= @user.email %>
       </dd>
-      <!-- Display email end -->
 
       <dt>
         Password
       </dt>
-      <!-- Display password start -->
       <dd>
         <%= @user.password %>
       </dd>
-      <!-- Display password end -->
 
       <dt>
         Username
       </dt>
-      <!-- Display username start -->
       <dd>
         <%= @user.username %>
       </dd>
-      <!-- Display username end -->
 
       <dt>
         First name
       </dt>
-      <!-- Display first_name start -->
       <dd>
         <%= @user.first_name %>
       </dd>
-      <!-- Display first_name end -->
 
       <dt>
         Last name
       </dt>
-      <!-- Display last_name start -->
       <dd>
         <%= @user.last_name %>
       </dd>
-      <!-- Display last_name end -->
 
       <dt>
         Address
       </dt>
-      <!-- Display address start -->
       <dd>
         <div>
           <%= render partial: "user_templates/one_photo_map" %>
         </div>
       </dd>
-      <!-- Display address end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@user.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@user.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "user_templates/user_own_photos" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

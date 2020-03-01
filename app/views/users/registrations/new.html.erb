@@ -7,9 +7,7 @@
 
       <div class="card-body">
         <% was_validated = resource.errors.any? %>
-        <!-- Form html options start -->
         <% form_html_options = { novalidate: true, class: "mb-3" } %>
-        <!-- Form html options end -->
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: form_html_options) do |f| %>
 
           <div class="form-group">
@@ -91,7 +89,6 @@
           </div>
 
           
-          <!-- Devise Input for username start -->
           <div class="form-group">
             <% username_was_invalid = resource.errors.include?(:username) %>
 
@@ -117,9 +114,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for username end -->
           
-          <!-- Devise Input for first_name start -->
           <div class="form-group">
             <% first_name_was_invalid = resource.errors.include?(:first_name) %>
 
@@ -145,9 +140,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for first_name end -->
           
-          <!-- Devise Input for last_name start -->
           <div class="form-group">
             <% last_name_was_invalid = resource.errors.include?(:last_name) %>
 
@@ -173,9 +166,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for last_name end -->
           
-          <!-- Devise Input for address start -->
           <div class="form-group">
             <% address_was_invalid = resource.errors.include?(:address) %>
 
@@ -201,7 +192,6 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for address end -->
           <%= f.button class: "btn btn-outline-primary btn-block" %>
 
           <hr>
