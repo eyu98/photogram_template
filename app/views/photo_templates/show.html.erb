@@ -13,17 +13,21 @@
 
       <!-- Edit link photo start -->
       <div class="col">
-        <a href="/photos/<%= @photo.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit photo
-        </a>
+        <% if current_user == @photo.owner %>
+          <a href="/photos/<%= @photo.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit photo
+          </a>
+        <% end %>
       </div>
       <!-- Edit link photo end -->
 
       <!-- Delete link photo start -->
       <div class="col">
-        <a href="/delete_photo/<%= @photo.id %>" class="btn btn-block btn-outline-secondary">
-          Delete photo
-        </a>
+        <% if current_user == @photo.owner %>
+          <a href="/delete_photo/<%= @photo.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete photo
+          </a>
+        <% end %>
       </div>
       <!-- Delete link photo end -->
     </div>
