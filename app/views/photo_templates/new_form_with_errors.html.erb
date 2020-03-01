@@ -51,7 +51,7 @@
     </label>
 
     <!-- Input for owner_id start -->
-    <input type="text" id="owner_id" name="owner_id" class="form-control" value="<%= @photo.owner_id %>">
+    <%= select_tag(:owner_id, options_from_collection_for_select(User.all, :id, :username, @photo.owner_id), :class => "form-control") %>
     <!-- Input for owner_id end -->
   </div>
   <!-- Label and input for owner_id end -->
