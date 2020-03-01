@@ -6,7 +6,7 @@
 <hr>
 
 <!-- Form photo start -->
-<form action="/create_photo" method="post">
+<form action="/create_photo" method="post" enctype="multipart/form-data">
 <!-- Form photo end -->
 
   <!-- Label and input for caption start -->
@@ -28,7 +28,7 @@
     </label>
 
     <!-- Input for image start -->
-    <input type="text" id="image" name="image" class="form-control">
+    <input type="file" id="image" name="image" class="form-control">
     <!-- Input for image end -->
   </div>
   <!-- Label and input for image end -->

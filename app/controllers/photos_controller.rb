@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new
 
     @photo.caption = params.fetch("caption")
-    @photo.image = params.fetch("image")
+    @photo.image = params.fetch("image") if params.key?("image")
     @photo.owner_id = params.fetch("owner_id")
     @photo.location = params.fetch("location")
 
@@ -44,7 +44,7 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params.fetch("id_to_modify"))
 
     @photo.caption = params.fetch("caption")
-    @photo.image = params.fetch("image")
+    @photo.image = params.fetch("image") if params.key?("image")
     @photo.owner_id = params.fetch("owner_id")
     @photo.location = params.fetch("location")
 

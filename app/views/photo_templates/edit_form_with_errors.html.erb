@@ -14,7 +14,7 @@
 <hr>
 
 <!-- Form photo start -->
-<form action="/update_photo/<%= @photo.id %>" method="post">
+<form action="/update_photo/<%= @photo.id %>" method="post" enctype="multipart/form-data">
 <!-- Form photo end -->
 
   <!-- Label and input for caption start -->
@@ -36,7 +36,8 @@
     </label>
 
     <!-- Input for image start -->
-    <input type="text" id="image" name="image" class="form-control" value="<%= @photo.image %>">
+    <%= cl_image_tag(@photo.image.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+    <input type="file" id="image" name="image" class="form-control">
     <!-- Input for image end -->
   </div>
   <!-- Label and input for image end -->
