@@ -72,7 +72,9 @@
       </dt>
       <!-- Display address start -->
       <dd>
-        <%= @user.address %>
+        <div>
+          <%= render partial: "user_templates/one_photo_map" %>
+        </div>
       </dd>
       <!-- Display address end -->
 

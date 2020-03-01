@@ -65,7 +65,9 @@
       </dt>
       <!-- Display location start -->
       <dd>
-        <%= @photo.location %>
+        <div>
+          <%= render partial: "photo_templates/one_photo_map" %>
+        </div>
       </dd>
       <!-- Display location end -->
 
