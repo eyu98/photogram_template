@@ -57,3 +57,5 @@ gem 'cloudinary'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem "rollbar"
+gem "kaminari"
+gem "bootstrap4-kaminari-views"
